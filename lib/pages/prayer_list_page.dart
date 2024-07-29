@@ -52,94 +52,127 @@ class _PrayerListPageState extends State<PrayerListPage> {
                     .map(
                       (e) => ListTile(
                         title: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                const Text(
-                                  'صلاة الفجر: ',
-                                ),
-                                Text(
-                                  e['timings']['Fajr'],
-                                ),
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Text(
+                                    e['timings']['Fajr'],
+                                  ),
+                                  const Text(
+                                    'صلاة الفجر',
+                                  ),
+                                ],
+                              ),
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                const Text(
-                                  'صلاة الفجر: ',
-                                ),
-                                Text(
-                                  e['timings']['Fajr'],
-                                ),
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Text(
+                                    e['timings']['Fajr'],
+                                  ),
+                                  const Text(
+                                    'صلاة الفجر',
+                                  ),
+                                ],
+                              ),
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                const Text(
-                                  'الشروق : ',
-                                ),
-                                Text(
-                                  e['timings']['Sunrise'],
-                                ),
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Text(
+                                    e['timings']['Sunrise'],
+                                  ),
+                                  const Text(
+                                    'الشروق',
+                                  ),
+                                ],
+                              ),
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                const Text(
-                                  'صلاة الظهر: ',
-                                ),
-                                Text(
-                                  e['timings']['Dhuhr'],
-                                ),
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Text(
+                                    e['timings']['Dhuhr'],
+                                  ),
+                                  const Text(
+                                    'صلاة الظهر',
+                                  ),
+                                ],
+                              ),
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                const Text(
-                                  'صلاة العصر: ',
-                                ),
-                                Text(
-                                  e['timings']['Asr'],
-                                ),
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Text(
+                                    e['timings']['Asr'],
+                                  ),
+                                  const Text(
+                                    'صلاة العصر',
+                                  ),
+                                ],
+                              ),
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                const Text(
-                                  'صلاة المغرب: ',
-                                ),
-                                Text(
-                                  e['timings']['Maghrib'],
-                                ),
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Text(
+                                    e['timings']['Maghrib'],
+                                  ),
+                                  const Text(
+                                    'صلاة المغرب',
+                                  ),
+                                ],
+                              ),
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                const Text(
-                                  'صلاة العشاء: ',
-                                ),
-                                Text(
-                                  e['timings']['Isha'],
-                                ),
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Text(
+                                    e['timings']['Isha'],
+                                  ),
+                                  const Text(
+                                    'صلاة العشاء',
+                                  ),
+                                ],
+                              ),
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                const Text(
-                                  'منتصف الليل : ',
-                                ),
-                                Text(
-                                  e['timings']['Midnight'],
-                                ),
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Text(
+                                    e['timings']['Midnight'],
+                                  ),
+                                  const Text(
+                                    'منتصف الليل',
+                                  ),
+                                ],
+                              ),
                             ),
                           ],
                         ),
