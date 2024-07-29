@@ -3,19 +3,20 @@
 import 'dart:convert';
 
 import 'package:carousel_slider_app/components/neu_box.dart';
+import 'package:carousel_slider_app/models/prayer_time.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class PrayerListPage extends StatefulWidget {
-  const PrayerListPage({super.key});
+class PrayerlistUpdated extends StatefulWidget {
+  const PrayerlistUpdated({super.key});
 
   @override
-  State<PrayerListPage> createState() => _PrayerListPageState();
+  State<PrayerlistUpdated> createState() => _PrayerlistUpdatedState();
 }
 
-class _PrayerListPageState extends State<PrayerListPage> {
+class _PrayerlistUpdatedState extends State<PrayerlistUpdated> {
   bool isLoading = false;
-  var prayerTims = [];
+  List<PrayerTime> prayerTims = [];
   @override
   void initState() {
     initList();
@@ -29,7 +30,11 @@ class _PrayerListPageState extends State<PrayerListPage> {
     var result = await rootBundle.loadString('assets/prayer.json');
     var response = jsonDecode(result);
     if (response['status'] == 'OK') {
-      prayerTims = response['data'];
+      prayerTims = List<PrayerTime>.from(
+          response['data'].map((e) => PrayerTime.fromJson(e)).tolist());
+
+      print(prayerTims);
+      print('code is ${response['code']}');
     } else {
       print('Error code is ${response['code']}');
       return;
@@ -63,7 +68,7 @@ class _PrayerListPageState extends State<PrayerListPage> {
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     Text(
-                                      e['timings']['Fajr'],
+                                      e.data?.first.timings?.fajr ?? '',
                                     ),
                                     const Text(
                                       'صلاة الفجر',
@@ -78,7 +83,7 @@ class _PrayerListPageState extends State<PrayerListPage> {
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     Text(
-                                      e['timings']['Fajr'],
+                                      e.data?.first.timings?.fajr ?? '',
                                     ),
                                     const Text(
                                       'صلاة الفجر',
@@ -93,7 +98,7 @@ class _PrayerListPageState extends State<PrayerListPage> {
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     Text(
-                                      e['timings']['Sunrise'],
+                                      e.data?.first.timings?.fajr ?? '',
                                     ),
                                     const Text(
                                       'الشروق',
@@ -108,7 +113,7 @@ class _PrayerListPageState extends State<PrayerListPage> {
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     Text(
-                                      e['timings']['Dhuhr'],
+                                      e.data?.first.timings?.fajr ?? '',
                                     ),
                                     const Text(
                                       'صلاة الظهر',
@@ -123,7 +128,7 @@ class _PrayerListPageState extends State<PrayerListPage> {
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     Text(
-                                      e['timings']['Asr'],
+                                      e.data?.first.timings?.fajr ?? '',
                                     ),
                                     const Text(
                                       'صلاة العصر',
@@ -138,7 +143,7 @@ class _PrayerListPageState extends State<PrayerListPage> {
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     Text(
-                                      e['timings']['Maghrib'],
+                                      e.data?.first.timings?.fajr ?? '',
                                     ),
                                     const Text(
                                       'صلاة المغرب',
@@ -153,7 +158,7 @@ class _PrayerListPageState extends State<PrayerListPage> {
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     Text(
-                                      e['timings']['Isha'],
+                                      e.data?.first.timings?.fajr ?? '',
                                     ),
                                     const Text(
                                       'صلاة العشاء',
@@ -168,7 +173,7 @@ class _PrayerListPageState extends State<PrayerListPage> {
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     Text(
-                                      e['timings']['Midnight'],
+                                      e.data?.first.timings?.fajr ?? '',
                                     ),
                                     const Text(
                                       'منتصف الليل',
