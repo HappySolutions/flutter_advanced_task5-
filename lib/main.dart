@@ -1,3 +1,4 @@
+import 'package:carousel_slider_app/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider_app/pages/playlist_page.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const PlaylistPage(),
+      home: const HomePage(),
     );
   }
 }

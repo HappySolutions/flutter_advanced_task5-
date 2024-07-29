@@ -1,5 +1,3 @@
-import 'dart:typed_data';
-
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
