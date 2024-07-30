@@ -34,7 +34,6 @@ class _PrayerlistUpdatedState extends State<PrayerlistUpdated> {
           response['data'].map((e) => PrayerTime.fromJson(e)).tolist());
 
       print(prayerTims);
-      print('code is ${response['code']}');
     } else {
       print('Error code is ${response['code']}');
       return;
