@@ -2,6 +2,7 @@ import 'package:carousel_slider_app/pages/playlist_page.dart';
 import 'package:carousel_slider_app/pages/prayer_list_page.dart';
 import 'package:carousel_slider_app/pages/prayerlist_updated_page.dart';
 import 'package:carousel_slider_app/pages/tasbeeh_page.dart';
+import 'package:carousel_slider_app/widgets/custom_navigationbar.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -22,33 +23,37 @@ class _HomePageState extends State<HomePage> {
   static const List<Widget> _pages = <Widget>[
     PlaylistPage(),
     PrayerListPage(),
+    TasbeehPage(),
     PrayerlistUpdated(),
-    TasbeehPage()
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.list),
-            label: 'القائمة',
+      extendBody: true,
+      bottomNavigationBar: BottomNavBar(
+        curentIndex: _selectedIndex,
+        backgroundColor: const Color.fromARGB(255, 237, 237, 237),
+        onTap: (value) => setState(() {
+          _selectedIndex = value;
+        }),
+        children: [
+          BottomNavBarItem(
+            title: "القائمة",
+            icon: Icons.list_outlined,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.camera),
-            label: 'المواقيت',
+          BottomNavBarItem(
+            title: "المواقيت",
+            icon: Icons.timelapse,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.chat),
-            label: 'حول',
+          BottomNavBarItem(
+            title: 'تسبيح',
+            icon: Icons.access_alarms,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.countertops),
-            label: 'تسبيح',
+          BottomNavBarItem(
+            title: "حول",
+            icon: Icons.chat,
           ),
         ],
-        currentIndex: _selectedIndex, //New
-        onTap: _onItemTapped,
       ),
       body: SafeArea(
         child: Center(child: _pages.elementAt(_selectedIndex)),

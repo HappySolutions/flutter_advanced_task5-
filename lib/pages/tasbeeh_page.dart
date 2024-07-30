@@ -12,7 +12,11 @@ class _TasbeehPageState extends State<TasbeehPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Center(
+          child: Text('عداد التسبيح'),
+        ),
+      ),
       body: SafeArea(
         child: Center(
           child: Column(
@@ -51,10 +55,17 @@ class _TasbeehPageState extends State<TasbeehPage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        shape: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(50),
+            borderSide: BorderSide.none),
+        backgroundColor: Colors.green,
         onPressed: () {
           counterNotifier.value++;
         },
-        child: const Icon(Icons.add),
+        child: const Icon(
+          Icons.add,
+          color: Colors.white,
+        ),
       ),
     );
   }
