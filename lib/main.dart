@@ -1,6 +1,5 @@
 import 'package:carousel_slider_app/pages/home.dart';
 import 'package:flutter/material.dart';
-import 'package:carousel_slider_app/pages/playlist_page.dart';
 
 void main() {
   runApp(const MyApp());

@@ -30,15 +30,13 @@ class _PrayerlistUpdatedState extends State<PrayerlistUpdated> {
     var result = await rootBundle.loadString('assets/prayer.json');
     var response = jsonDecode(result);
     if (response['status'] == 'OK') {
-      prayerTims = List<PrayerTime>.from(
-          response['data'].map((e) => PrayerTime.fromJson(e)).tolist());
-
+      prayerTims = response.map((e) => PrayerTime.fromJson(e)).toList();
       print(prayerTims);
     } else {
       print('Error code is ${response['code']}');
       return;
     }
-
+//PrayerTime.fromJson(e)).tolist()
     setState(() {
       isLoading = false;
     });

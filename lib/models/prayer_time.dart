@@ -18,3 +18,5 @@ class PrayerTime {
     }
   }
 }
+//        json['timings'] != null ? Timings.fromJson(json['timings']) : null;
+    // data = json['data'] != null ? Data.fromJson(json['data']) : null;

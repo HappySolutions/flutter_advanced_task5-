@@ -2,7 +2,6 @@ import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:carousel_slider_app/components/neu_box.dart';
 import 'package:carousel_slider_app/pages/sound_player_page.dart';
 import 'package:flutter/material.dart';
-import 'package:carousel_slider_app/pages/home.dart';
 
 class SongWidget extends StatefulWidget {
   final Audio audio;
