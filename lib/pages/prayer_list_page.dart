@@ -47,7 +47,7 @@ class _PrayerListPageState extends State<PrayerListPage> {
           title: const Center(child: Text('مواقيت الصلاة')),
         ),
         body: isLoading
-            ? const CircularProgressIndicator()
+            ? const Center(child: CircularProgressIndicator())
             : ListView(
                 children: prayerTims
                     .map(
