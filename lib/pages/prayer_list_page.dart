@@ -78,21 +78,6 @@ class _PrayerListPageState extends State<PrayerListPage> {
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     Text(
-                                      '${e['timings']['Fajr']} AM',
-                                    ),
-                                    const Text(
-                                      'صلاة الفجر',
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                  children: [
-                                    Text(
                                       '${e['timings']['Sunrise']} AM',
                                     ),
                                     const Text(
