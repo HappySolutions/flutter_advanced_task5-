@@ -1,6 +1,7 @@
 import 'package:carousel_slider_app/pages/playlist_page.dart';
 import 'package:carousel_slider_app/pages/prayer_list_page.dart';
 import 'package:carousel_slider_app/pages/prayerlist_updated_page.dart';
+import 'package:carousel_slider_app/pages/tasbeeh_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -21,7 +22,8 @@ class _HomePageState extends State<HomePage> {
   static const List<Widget> _pages = <Widget>[
     PlaylistPage(),
     PrayerListPage(),
-    PrayerlistUpdated()
+    PrayerlistUpdated(),
+    TasbeehPage()
   ];
   @override
   Widget build(BuildContext context) {
@@ -39,6 +41,10 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.chat),
             label: 'حول',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.countertops),
+            label: 'تسبيح',
           ),
         ],
         currentIndex: _selectedIndex, //New

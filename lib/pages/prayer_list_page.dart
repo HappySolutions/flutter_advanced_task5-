@@ -63,7 +63,7 @@ class _PrayerListPageState extends State<PrayerListPage> {
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     Text(
-                                      e['timings']['Fajr'],
+                                      '${e['timings']['Fajr']} AM',
                                     ),
                                     const Text(
                                       'صلاة الفجر',
@@ -78,7 +78,7 @@ class _PrayerListPageState extends State<PrayerListPage> {
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     Text(
-                                      e['timings']['Fajr'],
+                                      '${e['timings']['Fajr']} AM',
                                     ),
                                     const Text(
                                       'صلاة الفجر',
@@ -93,7 +93,7 @@ class _PrayerListPageState extends State<PrayerListPage> {
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     Text(
-                                      e['timings']['Sunrise'],
+                                      '${e['timings']['Sunrise']} AM',
                                     ),
                                     const Text(
                                       'الشروق',
@@ -108,7 +108,7 @@ class _PrayerListPageState extends State<PrayerListPage> {
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     Text(
-                                      e['timings']['Dhuhr'],
+                                      '${e['timings']['Dhuhr']} PM',
                                     ),
                                     const Text(
                                       'صلاة الظهر',
@@ -123,7 +123,7 @@ class _PrayerListPageState extends State<PrayerListPage> {
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     Text(
-                                      e['timings']['Asr'],
+                                      '${e['timings']['Asr']} PM',
                                     ),
                                     const Text(
                                       'صلاة العصر',
@@ -138,7 +138,7 @@ class _PrayerListPageState extends State<PrayerListPage> {
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     Text(
-                                      e['timings']['Maghrib'],
+                                      '${e['timings']['Maghrib']} PM',
                                     ),
                                     const Text(
                                       'صلاة المغرب',
@@ -153,7 +153,7 @@ class _PrayerListPageState extends State<PrayerListPage> {
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     Text(
-                                      e['timings']['Isha'],
+                                      '${e['timings']['Isha']} PM',
                                     ),
                                     const Text(
                                       'صلاة العشاء',
@@ -168,7 +168,7 @@ class _PrayerListPageState extends State<PrayerListPage> {
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     Text(
-                                      e['timings']['Midnight'],
+                                      '${e['timings']['Midnight']} AM',
                                     ),
                                     const Text(
                                       'منتصف الليل',
