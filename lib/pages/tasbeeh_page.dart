@@ -18,15 +18,33 @@ class _TasbeehPageState extends State<TasbeehPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text('سبحان الله والحمد لله ولا إله إلا الله والله أكبر'),
+              const Text(
+                'سبحان الله بحمده سبحان الله العظيم',
+                style: TextStyle(fontSize: 20),
+              ),
               const SizedBox(
                 height: 20,
               ),
               ValueListenableBuilder(
                 builder: (context, value, _) {
-                  return Text('$value');
+                  return Text(
+                    '$value',
+                    style: const TextStyle(fontSize: 20),
+                  );
                 },
                 valueListenable: counterNotifier,
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              TextButton(
+                onPressed: () {
+                  counterNotifier.value = 0;
+                },
+                child: const Text(
+                  'إعادة الضبط',
+                  style: TextStyle(fontSize: 15),
+                ),
               ),
             ],
           ),
